@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Grade" representedClassName="Grade" syncable="YES" codeGenerationType="class">
+        <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="grade_student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="student_grade" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="creditCardNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emailAddr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="school" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sno" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="student_grade" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Grade" inverseName="grade_student" inverseEntity="Grade" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Grade" positionX="-207" positionY="-144" width="128" height="90"/>
+        <element name="Student" positionX="-423" positionY="-216" width="128" height="165"/>
+        <element name="User" positionX="-405" positionY="-61" width="128" height="73"/>
+    </elements>
+</model>
